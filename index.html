@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geo Rittenmyer — The Work</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300&family=Suisse+Intl:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f4f0;
+      --ink: #1a1916;
+      --ink-soft: #6b6a66;
+      --accent: #c8a96e;
+      --nav-h: 56px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Cormorant', Georgia, serif;
+      font-weight: 300;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      background: var(--bg);
+      z-index: 100;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 28px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-family: 'Cormorant', serif;
+      font-weight: 300;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--ink); }
+
+    /* ── MOBILE MENU ── */
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .burger span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--ink);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--bg);
+      padding: 24px 32px;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      z-index: 99;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      font-family: 'Cormorant', serif;
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .burger { display: flex; }
+    }
+
+    /* ── PAGE SECTIONS ── */
+    .page { display: none; padding-top: var(--nav-h); }
+    .page.active { display: block; }
+
+    /* ── GRID ── */
+    .grid-header {
+      padding: 40px 32px 20px;
+    }
+    .grid-header h1 {
+      font-size: clamp(11px, 1.2vw, 13px);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      font-weight: 300;
+    }
+
+    .masonry {
+      columns: 3 300px;
+      column-gap: 8px;
+      padding: 0 8px 60px;
+    }
+
+    .card {
+      break-inside: avoid;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .card:hover img { transform: scale(1.03); }
+
+    .card-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(20,18,14,0.55) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .card:hover .card-label { opacity: 1; }
+
+    .card-label span {
+      font-family: 'Cormorant', serif;
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    /* ── PROJECT DETAIL VIEW ── */
+    .project-view {
+      display: none;
+      padding-top: var(--nav-h);
+    }
+    .project-view.active { display: block; }
+
+    .project-header {
+      padding: 40px 32px 24px;
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+    }
+
+    .project-header h2 {
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 300;
+      letter-spacing: -0.01em;
+    }
+
+    .back-btn {
+      font-family: 'Cormorant', serif;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .back-btn:hover { color: var(--ink); }
+    .back-btn::before { content: '← '; }
+
+    .project-images {
+      columns: 2 280px;
+      column-gap: 8px;
+      padding: 0 8px 80px;
+    }
+
+    .project-images img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    /* ── INFO PAGE ── */
+    #page-info {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: calc(var(--nav-h) + 60px) 32px 80px;
+    }
+
+    #page-info h2 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 300;
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+    }
+
+    #page-info p {
+      font-size: 19px;
+      line-height: 1.7;
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+    }
+
+    .info-contact {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .info-contact a {
+      font-family: 'Cormorant', serif;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+      width: fit-content;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .info-contact a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 32px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      border-top: 1px solid rgba(0,0,0,0.07);
+    }
+
+    /* ── FADE IN ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .card {
+      animation: fadeUp 0.5s ease both;
+    }
+    .card:nth-child(3n+1) { animation-delay: 0ms; }
+    .card:nth-child(3n+2) { animation-delay: 60ms; }
+    .card:nth-child(3n)   { animation-delay: 120ms; }
+
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('work'); return false;">
+    <img src="https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/d646a719-cf1d-4c64-9548-decdf8041fe9/Logo_Left_Default.png?format=300w" alt="Geo Rittenmyer">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" id="nav-work" class="active" onclick="showPage('work'); return false;">The Work</a></li>
+    <li><a href="#" id="nav-info" onclick="showPage('info'); return false;">Info</a></li>
+  </ul>
+  <button class="burger" id="burgerBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showPage('work'); closeMobile(); return false;">The Work</a>
+  <a href="#" onclick="showPage('info'); closeMobile(); return false;">Info</a>
+</div>
+
+<!-- WORK PAGE -->
+<div class="page active" id="page-work">
+  <div class="masonry" id="mainGrid"></div>
+</div>
+
+<!-- PROJECT VIEW -->
+<div class="project-view" id="project-view">
+  <div class="project-header">
+    <button class="back-btn" onclick="closeProject()">Back</button>
+    <h2 id="project-title"></h2>
+  </div>
+  <div class="project-images" id="project-images"></div>
+</div>
+
+<!-- INFO PAGE -->
+<div class="page" id="page-info">
+  <h2>Geo Rittenmyer</h2>
+  <p>Seattle-based photographer working at the intersection of documentary and commercial work. Available for editorial, event, and brand projects.</p>
+  <p>For inquiries, licensing, or just to say hello:</p>
+  <div class="info-contact">
+    <a href="https://georittenmyer.com/inform" target="_blank">Full Bio & Info ↗</a>
+    <a href="mailto:geo@georittenmyer.com">Email Geo</a>
+    <a href="https://www.instagram.com/georittenmyer/" target="_blank">Instagram</a>
+  </div>
+</div>
+
+<footer>© Geo Rittenmyer — All Rights Reserved</footer>
+
+<script>
+// ── DATA ──
+const BASE = 'https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/';
+
+const projects = [
+  {
+    id: 'ringling',
+    title: 'Ringling',
+    cover: BASE + 'GIF05-900.gif',
+    images: [
+      BASE + 'GIF05-900.gif',
+    ]
+  },
+  {
+    id: 'election',
+    title: 'Election Year',
+    cover: BASE + '1713818344933-WM7CALOVYN33VSB6XM5Y/20180421_00060-2.jpg?format=800w',
+    images: [
+      BASE + '1713818344933-WM7CALOVYN33VSB6XM5Y/20180421_00060-2.jpg?format=1200w',
+      BASE + '1713818344642-RW7WTSHFQYM2U04SXETD/20180714_00121x.jpg?format=1200w',
+    ]
+  },
+  {
+    id: 'ballardfc',
+    title: 'Ballard FC',
+    cover: BASE + '1713818838544-Z99P5OBW9QBKMCTZUJN2/20230516_0444.jpg?format=800w',
+    images: [
+      BASE + '1713818838544-Z99P5OBW9QBKMCTZUJN2/20230516_0444.jpg?format=1200w',
+      BASE + '1713818842159-AQFDR483CWN5Y4JQGK6G/20220517_0049-2.jpg?format=1200w',
+      BASE + '1713818875821-B95QH2J68BJH1P784ODM/20220620_0088.jpg?format=1200w',
+    ]
+  },
+  {
+    id: 'badjimmys',
+    title: 'Bad Jimmys',
+    cover: BASE + '1713819779821-K1AD12Z2Z04VJXI46ZU7/Pour_01.gif',
+    images: [
+      BASE + '1713819779821-K1AD12Z2Z04VJXI46ZU7/Pour_01.gif',
+    ]
+  },
+  {
+    id: 'selfie',
+    title: 'Project Selfie',
+    cover: BASE + '1713819998906-5I0EVHEBONQU5YV8RT1T/20190409_0543-Pano-2.jpg?format=800w',
+    images: [
+      BASE + '1713819998906-5I0EVHEBONQU5YV8RT1T/20190409_0543-Pano-2.jpg?format=1200w',
+      BASE + '1713820000733-V03OEJI1UHNOI25VCAIQ/20180926_0257-2.jpg?format=1200w',
+    ]
+  },
+  {
+    id: 'moonlanding',
+    title: 'Moon Landing',
+    cover: BASE + '1713820235245-Y4FTKR027ZJK5SQOF1LS/build_100.jpg?format=800w',
+    images: [
+      BASE + '1713820235245-Y4FTKR027ZJK5SQOF1LS/build_100.jpg?format=1200w',
+      BASE + '1713820236007-X0ZEAJCY64I17U4DNNKB/walking_100.jpg?format=1200w',
+    ]
+  },
+  {
+    id: 'sunglass',
+    title: 'Sunglass Stories',
+    cover: BASE + '1713820271909-WDTKISV09N0TA8YR5PZ3/Sunglasses0721.jpg?format=800w',
+    images: [
+      BASE + '1713820271909-WDTKISV09N0TA8YR5PZ3/Sunglasses0721.jpg?format=1200w',
+      BASE + '1713820271303-K9RKN4BCEW1GRGSTM3LJ/Sunglasses0753.jpg?format=1200w',
+      BASE + '1713820274912-CXP5PIFGPAMWIAA21OS1/Sunglasses0733.jpg?format=1200w',
+    ]
+  },
+  {
+    id: 'djhershe',
+    title: 'DJ Hershe',
+    cover: BASE + '1713820330741-2NZYN7JGO10U6HP81S40/20200825_5240.jpg?format=800w',
+    images: [
+      BASE + '1713820330741-2NZYN7JGO10U6HP81S40/20200825_5240.jpg?format=1200w',
+      BASE + '1713820331406-0YOAD7SS3YFL3TUW6ITV/20200825_0251.jpg?format=1200w',
+    ]
+  },
+  {
+    id: 'saratoga',
+    title: 'The Saratoga',
+    cover: BASE + '1713820765625-PPQ51L7GUC9DN31M3NZ5/SunsetWake-01.gif',
+    images: [
+      BASE + '1713820765625-PPQ51L7GUC9DN31M3NZ5/SunsetWake-01.gif',
+    ]
+  },
+  {
+    id: 'chamberchoir',
+    title: 'Chamber Choir',
+    cover: BASE + '1713820932695-TN34OPOAMTV3YYMXFMJB/ChoirProject_00258-Edit.jpg?format=800w',
+    images: [
+      BASE + '1713820932695-TN34OPOAMTV3YYMXFMJB/ChoirProject_00258-Edit.jpg?format=1200w',
+      BASE + '1713820932353-9EJW6891A8T740FPGFZD/ChoirProject_00324-Edit.jpg?format=1200w',
+      BASE + '1713820936542-MJ2UVPO8LQ9DWLZFE24N/ChoirProject_00405-Edit.jpg?format=1200w',
+      BASE + '1713820936673-SEB9L2J6X3Z2U0FU31KN/ChoirProject_00281-Edit.jpg?format=1200w',
+    ]
+  },
+  {
+    id: 'jurassic',
+    title: 'Jurassic Live',
+    cover: BASE + '1705038815740-ZT7HDQU1F8199ACCN0E7/JWLT_20190923_00179.jpg?format=800w',
+    images: [
+      BASE + '1705038815740-ZT7HDQU1F8199ACCN0E7/JWLT_20190923_00179.jpg?format=1200w',
+      BASE + '1705038815243-DSMG0OD3C4GONW61V358/JWLT_20190923_00477.jpg?format=1200w',
+      BASE + '1705038822100-D16KVEHPHJVW7WKBBJRW/JWLT_20190923_00648.jpg?format=1200w',
+      BASE + '1705038823683-CLUHLJD1KKWUXICGGWT3/JWLT_20190923_00724.jpg?format=1200w',
+    ]
+  },
+  {
+    id: 'portraits',
+    title: 'Portraits',
+    cover: BASE + '1713818461286-BET0O5N41IMSW1Y3DRI4/20170604_0553.jpg?format=800w',
+    images: [
+      BASE + '1713818461286-BET0O5N41IMSW1Y3DRI4/20170604_0553.jpg?format=1200w',
+      BASE + '1713818461043-C5JZ3DDTZY09XYXE46J4/20200229_00249.jpg?format=1200w',
+      BASE + '1713818465037-J1RV10R09ZNBGVHT19RZ/_MG_0030_100.jpg?format=1200w',
+    ]
+  },
+];
+
+// ── RENDER GRID ──
+function renderGrid() {
+  const grid = document.getElementById('mainGrid');
+  grid.innerHTML = '';
+  projects.forEach((p, i) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.animationDelay = (i * 40) + 'ms';
+    card.innerHTML = `
+      <img src="${p.cover}" alt="${p.title}" loading="lazy">
+      <div class="card-label"><span>${p.title}</span></div>
+    `;
+    card.addEventListener('click', () => openProject(p));
+    grid.appendChild(card);
+  });
+}
+
+// ── PROJECT VIEW ──
+function openProject(p) {
+  document.getElementById('project-title').textContent = p.title;
+  const container = document.getElementById('project-images');
+  container.innerHTML = p.images.map(src =>
+    `<img src="${src}" alt="${p.title}" loading="lazy">`
+  ).join('');
+  document.getElementById('page-work').style.display = 'none';
+  document.getElementById('project-view').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closeProject() {
+  document.getElementById('project-view').style.display = 'none';
+  document.getElementById('page-work').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+// ── PAGE SWITCHER ──
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
+  document.getElementById('project-view').style.display = 'none';
+
+  if (page === 'work') {
+    document.getElementById('page-work').classList.add('active');
+    document.getElementById('nav-work').classList.add('active');
+  } else if (page === 'info') {
+    document.getElementById('page-info').classList.add('active');
+    document.getElementById('nav-info').classList.add('active');
+  }
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+// ── MOBILE MENU ──
+const burger = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+function closeMobile() {
+  burger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}
+
+// ── INIT ──
+renderGrid();
+</script>
+</body>
+</html>

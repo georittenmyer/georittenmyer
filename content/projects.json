@@ -1,0 +1,194 @@
+[
+  {
+    "id": "ringling",
+    "title": "Ringling",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/GIF05-900.gif",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/GIF05-900.gif"
+    ],
+    "_note": "GIF — candidate for conversion to MP4/WebM loop for perf"
+  },
+  {
+    "id": "election",
+    "title": "Election Year",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713818344933-WM7CALOVYN33VSB6XM5Y/20180421_00060-2.jpg?format=800w",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713818344933-WM7CALOVYN33VSB6XM5Y/20180421_00060-2.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713818344642-RW7WTSHFQYM2U04SXETD/20180714_00121x.jpg?format=1200w"
+    ]
+  },
+  {
+    "id": "ballardfc",
+    "title": "Ballard FC",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713818838544-Z99P5OBW9QBKMCTZUJN2/20230516_0444.jpg?format=800w",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713818838544-Z99P5OBW9QBKMCTZUJN2/20230516_0444.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713818842159-AQFDR483CWN5Y4JQGK6G/20220517_0049-2.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713818875821-B95QH2J68BJH1P784ODM/20220620_0088.jpg?format=1200w"
+    ]
+  },
+  {
+    "id": "badjimmys",
+    "title": "Bad Jimmys",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713819779821-K1AD12Z2Z04VJXI46ZU7/Pour_01.gif",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713819779821-K1AD12Z2Z04VJXI46ZU7/Pour_01.gif"
+    ],
+    "_note": "GIF — candidate for conversion to MP4/WebM loop for perf"
+  },
+  {
+    "id": "selfie",
+    "title": "Project Selfie",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713819998906-5I0EVHEBONQU5YV8RT1T/20190409_0543-Pano-2.jpg?format=800w",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713819998906-5I0EVHEBONQU5YV8RT1T/20190409_0543-Pano-2.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820000733-V03OEJI1UHNOI25VCAIQ/20180926_0257-2.jpg?format=1200w"
+    ]
+  },
+  {
+    "id": "moonlanding",
+    "title": "Moon Landing",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820235245-Y4FTKR027ZJK5SQOF1LS/build_100.jpg?format=800w",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820235245-Y4FTKR027ZJK5SQOF1LS/build_100.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820236007-X0ZEAJCY64I17U4DNNKB/walking_100.jpg?format=1200w"
+    ]
+  },
+  {
+    "id": "sunglass",
+    "title": "Sunglass Stories",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820271909-WDTKISV09N0TA8YR5PZ3/Sunglasses0721.jpg?format=800w",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820271909-WDTKISV09N0TA8YR5PZ3/Sunglasses0721.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820271303-K9RKN4BCEW1GRGSTM3LJ/Sunglasses0753.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820274912-CXP5PIFGPAMWIAA21OS1/Sunglasses0733.jpg?format=1200w"
+    ]
+  },
+  {
+    "id": "djhershe",
+    "title": "DJ Hershe",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820330741-2NZYN7JGO10U6HP81S40/20200825_5240.jpg?format=800w",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820330741-2NZYN7JGO10U6HP81S40/20200825_5240.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820331406-0YOAD7SS3YFL3TUW6ITV/20200825_0251.jpg?format=1200w"
+    ]
+  },
+  {
+    "id": "saratoga",
+    "title": "The Saratoga",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820765625-PPQ51L7GUC9DN31M3NZ5/SunsetWake-01.gif",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820765625-PPQ51L7GUC9DN31M3NZ5/SunsetWake-01.gif"
+    ],
+    "_note": "GIF — candidate for conversion to MP4/WebM loop for perf"
+  },
+  {
+    "id": "chamberchoir",
+    "title": "Chamber Choir",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820932695-TN34OPOAMTV3YYMXFMJB/ChoirProject_00258-Edit.jpg?format=800w",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820932695-TN34OPOAMTV3YYMXFMJB/ChoirProject_00258-Edit.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820932353-9EJW6891A8T740FPGFZD/ChoirProject_00324-Edit.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820936542-MJ2UVPO8LQ9DWLZFE24N/ChoirProject_00405-Edit.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713820936673-SEB9L2J6X3Z2U0FU31KN/ChoirProject_00281-Edit.jpg?format=1200w"
+    ]
+  },
+  {
+    "id": "jurassic",
+    "title": "Jurassic Live",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1705038815740-ZT7HDQU1F8199ACCN0E7/JWLT_20190923_00179.jpg?format=800w",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1705038815740-ZT7HDQU1F8199ACCN0E7/JWLT_20190923_00179.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1705038815243-DSMG0OD3C4GONW61V358/JWLT_20190923_00477.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1705038822100-D16KVEHPHJVW7WKBBJRW/JWLT_20190923_00648.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1705038823683-CLUHLJD1KKWUXICGGWT3/JWLT_20190923_00724.jpg?format=1200w"
+    ]
+  },
+  {
+    "id": "portraits",
+    "title": "Portraits",
+    "cover": "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713818461286-BET0O5N41IMSW1Y3DRI4/20170604_0553.jpg?format=800w",
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713818461286-BET0O5N41IMSW1Y3DRI4/20170604_0553.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713818461043-C5JZ3DDTZY09XYXE46J4/20200229_00249.jpg?format=1200w",
+      "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1713818465037-J1RV10R09ZNBGVHT19RZ/_MG_0030_100.jpg?format=1200w"
+    ]
+  },
+  {
+    "id": "odin",
+    "title": "Odin",
+    "cover": "assets/images/projects/odin/cover.jpg",
+    "images": [],
+    "_note": "TODO: Add images. Not yet in index.html — pull from live Squarespace site."
+  },
+  {
+    "id": "disney",
+    "title": "Disney",
+    "cover": "assets/images/projects/disney/cover.jpg",
+    "images": [],
+    "_note": "TODO: Add images. Not yet in index.html — pull from live Squarespace site."
+  },
+  {
+    "id": "katbell",
+    "title": "Kat Bell",
+    "cover": "assets/images/projects/katbell/cover.jpg",
+    "images": [],
+    "_note": "TODO: Add images. Not yet in index.html — pull from live Squarespace site."
+  },
+  {
+    "id": "editorial",
+    "title": "Editorial",
+    "cover": "assets/images/projects/editorial/cover.jpg",
+    "images": [],
+    "_note": "TODO: Add images. Not yet in index.html — pull from live Squarespace site."
+  },
+  {
+    "id": "marvellive",
+    "title": "Marvel Live",
+    "cover": "assets/images/projects/marvellive/cover.jpg",
+    "images": [],
+    "_note": "TODO: Add images. Not yet in index.html — pull from live Squarespace site."
+  },
+  {
+    "id": "statefair",
+    "title": "State Fair",
+    "cover": "assets/images/projects/statefair/cover.jpg",
+    "images": [],
+    "_note": "TODO: Add images. Not yet in index.html — pull from live Squarespace site."
+  },
+  {
+    "id": "wildchild",
+    "title": "Wild Child",
+    "cover": "assets/images/projects/wildchild/cover.jpg",
+    "images": [],
+    "_note": "TODO: Add images. Not yet in index.html — pull from live Squarespace site."
+  },
+  {
+    "id": "middleofnight",
+    "title": "Middle of the Night",
+    "cover": "assets/images/projects/middleofnight/cover.jpg",
+    "images": [],
+    "_note": "TODO: Add images. Not yet in index.html — pull from live Squarespace site."
+  },
+  {
+    "id": "seasonone",
+    "title": "Season One",
+    "cover": "assets/images/projects/seasonone/cover.jpg",
+    "images": [],
+    "_note": "TODO: Add images. Not yet in index.html — pull from live Squarespace site."
+  },
+  {
+    "id": "lottery",
+    "title": "Lottery",
+    "cover": "assets/images/projects/lottery/cover.jpg",
+    "images": [],
+    "_note": "TODO: Add images. Not yet in index.html — pull from live Squarespace site."
+  },
+  {
+    "id": "freeskate",
+    "title": "Free Skate",
+    "cover": "assets/images/projects/freeskate/cover.jpg",
+    "images": [],
+    "_note": "TODO: Archive project. Not yet in index.html — pull from live Squarespace site."
+  }
+]
