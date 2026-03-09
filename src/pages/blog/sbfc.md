@@ -4,6 +4,8 @@ title: "SBFC"
 date: "2025-10-01"
 cover: "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1760555158520-XF5QD615BO761Q8J2R2U/SBFC_20250515_1212.jpg?format=1200w"
 description: "A last-minute media day request turned into a proud neighborhood moment shooting Salmon Bay FC's launch."
+coverPosition: "center top"
+
 ---
 
 A few years ago, some incredible people started a semi-pro, hyper-local soccer club right here in the neighborhood, and it's been amazing to watch it grow. Now they've done it again, launching a sister club — a semi-pro women's team called Salmon Bay FC.
