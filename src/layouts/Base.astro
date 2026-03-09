@@ -7,6 +7,8 @@ export interface Props {
 
 const { title, description = 'Seattle-based photographer Geo Rittenmyer — documentary and commercial work.', ogImage = '/images/og-default.jpg' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+import '../styles/global.css';
 ---
 
 <!DOCTYPE html>

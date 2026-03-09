@@ -6,7 +6,7 @@ cover: "https://images.squarespace-cdn.com/content/v1/50c4bd4be4b0112a45d7e1e2/1
 description: "A three-day campaign shoot for Ringling's 2026 production, chasing audience wonder in a world of choreographed chaos."
 ---
 
-Sometimes I get to take on big, wild creative projects — the kind that sound amazing in theory and then evolve into something totally unexpected.
+Sometimes I get to take on big, wild creative projects, the kind that sound amazing in theory and then evolve into something totally unexpected.
 
 This assignment involved capturing audience reactions at a Ringling circus performance rather than focusing on the performers themselves. The creative direction was looking for that fine line between a genuine emotional reaction and a staged scene — the spark of real wonder within a carefully planned moment.
 
