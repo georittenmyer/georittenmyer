@@ -112,7 +112,30 @@ import "../styles/global.css";
             <slot />
         </main>
 
-        <footer>© Geo Rittenmyer — All Rights Reserved</footer>
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <p class="footer-label">Contact</p>
+                    <a href="mailto:hello@georittenmyer.com">hello@georittenmyer.com</a>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-label">Links</p>
+                    <a href="https://client.georittenmyer.com" target="_blank" rel="noopener">Client Access</a>
+                    <a href="https://crittenmyer.com" target="_blank" rel="noopener">Chelsea</a>
+                    <a href="#" aria-disabled="true">Travels</a>
+                    <a href="#" aria-disabled="true">Archive</a>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-label">Legal</p>
+                    <a href="#" aria-disabled="true">Privacy Statement</a>
+                    <span>© Geo Rittenmyer — All Rights Reserved</span>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-label">Site</p>
+                    <span>Design by Rat Face Industries</span>
+                </div>
+            </div>
+        </footer>
 
         <script>
             const burger = document.getElementById("burgerBtn");

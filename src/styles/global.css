@@ -225,14 +225,56 @@ nav {
 
 /* ── FOOTER ── */
 footer {
-    text-align: center;
-    padding: 32px;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
+    background: rgba(240, 237, 229, 0.82);
     border-top: 1px solid rgba(0, 0, 0, 0.07);
+    padding: 56px 6%;
     margin-top: 80px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-label {
+    font-family: sketchnote-square, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 14px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: var(--accent);
+}
+
+.footer-col a[aria-disabled="true"] {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .footer-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
 }
 
 /* ── MASONRY GRID ── */
