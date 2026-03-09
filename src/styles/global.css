@@ -24,16 +24,16 @@ body {
         repeating-linear-gradient(
             0deg,
             transparent,
-            transparent 39px,
-            rgba(60, 55, 45, 0.07) 39px,
-            rgba(60, 55, 45, 0.07) 40px
+            transparent 19px,
+            rgba(60, 55, 45, 0.07) 19px,
+            rgba(60, 55, 45, 0.07) 20px
         ),
         repeating-linear-gradient(
             90deg,
             transparent,
-            transparent 39px,
-            rgba(60, 55, 45, 0.07) 39px,
-            rgba(60, 55, 45, 0.07) 40px
+            transparent 19px,
+            rgba(60, 55, 45, 0.07) 19px,
+            rgba(60, 55, 45, 0.07) 20px
         );
     background-attachment: fixed;
     color: var(--ink);
@@ -247,6 +247,7 @@ footer {
     overflow: hidden;
     display: block;
     margin-bottom: 5%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.10);
     text-decoration: none;
     cursor: pointer;
     animation: fadeUp 0.5s ease both;
