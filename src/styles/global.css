@@ -12,7 +12,7 @@
     --ink-soft: #707070;  /* grey */
     --darkgrey: #303030;  /* darkgrey */
     --accent: #026D74;    /* teal */
-    --nav-h: 96px;
+    --nav-h: 116px;
 }
 
 html {
@@ -61,7 +61,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 0 64px;
+    padding: 0 6%;
     background: rgba(240, 237, 229, 0.82);
     z-index: 100;
     border-bottom: 1px solid rgba(0, 0, 0, 0.07);
@@ -121,8 +121,8 @@ nav {
     color: var(--ink);
 }
 .nav-instagram svg {
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
 }
 
 .nav-links {
@@ -135,7 +135,7 @@ nav {
     text-decoration: none;
     font-family: sketchnote-square, sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 19px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--ink-soft);
