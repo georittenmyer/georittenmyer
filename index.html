@@ -157,7 +157,7 @@
       display: block;
       width: 100%;
       height: auto;
-      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .card:hover img { transform: scale(1.03); }
@@ -166,9 +166,10 @@
       position: absolute;
       inset: 0;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
+      justify-content: center;
       padding: 20px;
-      background: linear-gradient(to top, rgba(20,18,14,0.55) 0%, transparent 50%);
+      background: rgba(20,18,14,0.45);
       opacity: 0;
       transition: opacity 0.35s ease;
     }
@@ -177,11 +178,12 @@
 
     .card-label span {
       font-family: sketchnote-square, sans-serif;
-      font-size: 15px;
+      font-size: clamp(18px, 2.5vw, 32px);
       font-weight: 400;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: #fff;
+      text-align: center;
     }
 
     /* ── PROJECT DETAIL VIEW ── */
@@ -718,32 +720,11 @@ function renderGrid() {
     card.className = 'card';
     card.style.animationDelay = (i * 40) + 'ms';
     card.innerHTML = `
-      <img src="${p.images[0]}" alt="${p.title}" loading="lazy">
+      <img src="${p.images[Math.floor(Math.random() * p.images.length)]}" alt="${p.title}" loading="lazy">
       <div class="card-label"><span>${p.title}</span></div>
     `;
     card.addEventListener('click', () => openProject(p));
     grid.appendChild(card);
-  });
-  startSlideshows();
-}
-
-// ── CARD SLIDESHOWS ──
-function startSlideshows() {
-  document.querySelectorAll('.card').forEach((card, i) => {
-    const p = projects[i];
-    if (p.images.length < 2) return;
-    const img = card.querySelector('img');
-    let idx = 0;
-    setTimeout(() => {
-      setInterval(() => {
-        idx = (idx + 1) % p.images.length;
-        img.style.opacity = '0';
-        setTimeout(() => {
-          img.src = p.images[idx];
-          img.style.opacity = '1';
-        }, 450);
-      }, 3000);
-    }, i * 300);
   });
 }
 
