@@ -237,8 +237,8 @@ footer {
 /* ── MASONRY GRID ── */
 .masonry {
     columns: 2;
-    column-gap: 40px;
-    padding: calc(var(--nav-h) + 20px) 32px 60px;
+    column-gap: 4%;
+    padding: calc(var(--nav-h) + 2%) 6% 6%;
 }
 
 .card {
@@ -246,7 +246,7 @@ footer {
     position: relative;
     overflow: hidden;
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 5%;
     text-decoration: none;
     cursor: pointer;
     animation: fadeUp 0.5s ease both;
